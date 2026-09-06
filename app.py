@@ -307,6 +307,272 @@ html, body, [data-testid="stAppViewContainer"] {
     overflow-y: auto !important;
 }
 
+/* ===== 최종 산뜻한 디자인 보정 ===== */
+
+/* 전체 화면 */
+.stApp {
+    background: #f7faf8;
+}
+
+/* 본문 영역 */
+.block-container {
+    max-width: 1180px;
+}
+
+/* 왼쪽 사이드바 - 밝고 산뜻한 녹색 */
+[data-testid="stSidebar"] {
+    background: linear-gradient(
+        180deg,
+        #79B995 0%,
+        #68AA85 100%
+    ) !important;
+}
+
+/* 사이드바 버튼 */
+[data-testid="stSidebar"] button {
+    border-radius: 10px !important;
+    transition: all 0.2s ease !important;
+}
+
+/* 사이드바 버튼에 마우스를 올렸을 때 */
+[data-testid="stSidebar"] button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+}
+
+/* 일반 버튼 */
+.stButton > button {
+    border-radius: 10px !important;
+    font-weight: 600 !important;
+    transition: all 0.2s ease !important;
+}
+
+/* 입력창 */
+[data-testid="stTextInput"] input,
+[data-testid="stNumberInput"] input {
+    border-radius: 10px !important;
+}
+
+/* selectbox */
+[data-baseweb="select"] > div {
+    border-radius: 10px !important;
+}
+
+/* 알림/안내 박스 */
+[data-testid="stAlert"] {
+    border-radius: 12px !important;
+}
+
+/* 제목 */
+h1, h2, h3 {
+    color: #173f32;
+    letter-spacing: -0.4px;
+}
+/* 사이드바 메뉴 버튼 - 더 진하게 */
+[data-testid="stSidebar"] button {
+    background: rgba(34, 120, 76, 0.78) !important;
+    border: 1px solid rgba(255, 255, 255, 0.30) !important;
+    color: white !important;
+    border-radius: 10px !important;
+    min-height: 42px !important;
+}
+
+/* 마우스 올렸을 때 조금 더 강조 */
+[data-testid="stSidebar"] button:hover {
+    background: rgba(24, 99, 62, 0.95) !important;
+}
+
+/* 사이드바 버튼 글자 줄바꿈 방지 */
+[data-testid="stSidebar"] button p {
+    white-space: nowrap !important;
+    font-size: 15px !important;
+}
+
+/* 사이드바 폭을 조금 넓혀 긴 메뉴도 한 줄 표시 */
+[data-testid="stSidebar"] {
+    min-width: 205px !important;
+    max-width: 205px !important;
+}
+
+/* ===== 사이드바 최종 폭/글자 보정 ===== */
+
+[data-testid="stSidebar"] {
+    min-width: 235px !important;
+    width: 235px !important;
+    max-width: 235px !important;
+}
+
+/* 메뉴 버튼 폭 */
+[data-testid="stSidebar"] button {
+    width: 100% !important;
+    min-width: 195px !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+}
+
+/* 메뉴 글자 - 선명하고 한 줄 */
+[data-testid="stSidebar"] button p {
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.3px !important;
+    line-height: 1.2 !important;
+}
+
+/* ===== 최종 반응형 화면 보정 ===== */
+
+/* 본문을 화면 크기에 맞게 넓게 사용 */
+.block-container {
+    width: 92% !important;
+    max-width: 1450px !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+}
+
+/* 전체 기본 글자 크기 */
+.stApp {
+    font-size: clamp(15px, 0.85vw, 18px) !important;
+}
+
+/* 제목도 큰 화면에서 자연스럽게 확대 */
+h1 {
+    font-size: clamp(28px, 2vw, 38px) !important;
+}
+
+h2 {
+    font-size: clamp(22px, 1.5vw, 30px) !important;
+}
+
+h3 {
+    font-size: clamp(18px, 1.15vw, 24px) !important;
+}
+
+/* 사이드바 폭 */
+[data-testid="stSidebar"] {
+    min-width: 250px !important;
+    width: 250px !important;
+    max-width: 250px !important;
+}
+
+/* 사이드바 메뉴 버튼 */
+[data-testid="stSidebar"] button {
+    width: 215px !important;
+    min-width: 215px !important;
+    max-width: 215px !important;
+
+    min-height: 44px !important;
+
+    background: rgba(38, 125, 79, 0.82) !important;
+    border: 1px solid rgba(255,255,255,0.35) !important;
+    border-radius: 10px !important;
+
+    padding: 8px 10px !important;
+}
+
+/* 사이드바 메뉴 글자 */
+[data-testid="stSidebar"] button p {
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.4px !important;
+    line-height: 1 !important;
+
+    margin: 0 !important;
+}
+
+/* 버튼 내부 요소도 줄바꿈 금지 */
+[data-testid="stSidebar"] button div {
+    white-space: nowrap !important;
+    flex-wrap: nowrap !important;
+}
+
+/* 일반 버튼 글자 */
+.stButton > button {
+    font-size: clamp(14px, 0.8vw, 17px) !important;
+}
+
+/* 입력창 글자 */
+input {
+    font-size: clamp(14px, 0.8vw, 17px) !important;
+}
+
+/* 사이드바 기본 메뉴 버튼 - 배경과 선택색의 중간 녹색 */
+[data-testid="stSidebar"] button {
+    background: #4F9F73 !important;
+    border: 1px solid rgba(255, 255, 255, 0.45) !important;
+    color: #ffffff !important;
+
+    border-radius: 10px !important;
+    min-height: 44px !important;
+
+    box-shadow: 0 2px 5px rgba(25, 90, 55, 0.12) !important;
+}
+
+/* 메뉴 글자 */
+[data-testid="stSidebar"] button p {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+}
+
+/* 마우스를 올렸을 때 */
+[data-testid="stSidebar"] button:hover {
+    background: #39885E !important;
+    border-color: rgba(255, 255, 255, 0.65) !important;
+    box-shadow: 0 4px 9px rgba(25, 90, 55, 0.20) !important;
+}
+
+/* ===== 사이드바 radio 메뉴 최종 디자인 ===== */
+
+/* 메뉴 한 줄 전체 */
+[data-testid="stSidebar"] [role="radiogroup"] label {
+    background: #4F9F73 !important;
+    border: 1px solid rgba(255,255,255,0.38) !important;
+    border-radius: 10px !important;
+
+    padding: 10px 12px !important;
+    margin-bottom: 8px !important;
+
+    min-height: 44px !important;
+    width: 100% !important;
+
+    box-shadow: 0 2px 5px rgba(25, 90, 55, 0.12) !important;
+}
+
+/* 메뉴 글자 */
+[data-testid="stSidebar"] [role="radiogroup"] label p {
+    color: white !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+
+    margin: 0 !important;
+}
+
+/* 선택된 메뉴 */
+[data-testid="stSidebar"] [role="radiogroup"] label:has(input:checked) {
+    background: #239653 !important;
+    border-color: rgba(255,255,255,0.65) !important;
+    box-shadow: 0 4px 10px rgba(22, 90, 52, 0.22) !important;
+}
+
+/* 마우스 올렸을 때 */
+[data-testid="stSidebar"] [role="radiogroup"] label:hover {
+    background: #3D8D64 !important;
+}
+
+/* radio 원 자체는 그대로 유지 */
+[data-testid="stSidebar"] [role="radiogroup"] input[type="radio"] {
+    flex-shrink: 0 !important;
+}
+
     </style>
 
     
@@ -321,8 +587,11 @@ html, body, [data-testid="stAppViewContainer"] {
 # --------------------------------------------------
 with st.sidebar:
 
-    st.markdown("## 🌿 GB 업무지원")
-    st.caption("개발제한구역 불법행위 업무지원")
+    st.markdown("### 🌿 GB 업무지원")
+    st.markdown(
+    "<div style='font-size:15px; font-weight:600; color:white;'>개발제한구역 불법행위 업무지원</div>",
+    unsafe_allow_html=True,
+)
 
     st.divider()
 
@@ -1437,7 +1706,7 @@ elif menu == "📗 업무가이드":
                                 key="farmer_house_is_farmer",
                             )
 
-                            has_existing_house = st.radio(
+                            has_Errorexisting_house = st.radio(
                                 "개발제한구역 안에 자기 소유의 기존 주택이 있습니까?",
                                 [
                                     "예",
@@ -1459,7 +1728,7 @@ elif menu == "📗 업무가이드":
 
                             if (
                                 is_farmer == "예"
-                                and has_existing_house == "예"
+                                and has_Errorexisting_house == "예"
                                 and will_remove_existing == "예"
                             ):
                                 st.success(
@@ -1469,7 +1738,7 @@ elif menu == "📗 업무가이드":
 
                             elif (
                                 is_farmer == "아니오"
-                                or has_existing_house == "아니오"
+                                or has_Errorexisting_house == "아니오"
                                 or will_remove_existing == "아니오"
                             ):
                                 st.error(
@@ -3565,21 +3834,43 @@ elif menu == "📋 행정처분 절차":
         "개발제한구역 불법행위에 대한 기본적인 처리 흐름입니다."
     )
 
+    st.info(
+        "※ 절차 진행 중 시정 등 수시 확인\n\n"
+        "• 각 단계에서 시정이 완료된 경우 → 시정완료 처리\n"
+        "• 소유권 변동 등 종결사유가 발생한 경우 → 종결사유 확인 후 행정처분 종결 여부 검토\n"
+        "• 2차 시정촉구 후에도 미시정인 경우 → 이행강제금 부과예고 → 이행강제금 부과 절차 진행"
+    )
+    st.warning(
+        "※ 이행강제금 부과 횟수\n\n"
+        "• 시정완료 시까지 매년 2회 이내"
+    )
+    
     steps = [
-        "① 위반행위 확인",
-        "② 현장조사 및 증거자료 확보",
-        "③ 사전통지",
-        "④ 의견제출",
-        "⑤ 시정명령",
-        "⑥ 이행 여부 확인",
-        "⑦ 이행강제금 부과 등 후속조치",
+        "① 위반행위 적발",
+        "② 현장계도 및 현장조사·증거자료 확보",
+        "③ 행정처분의 사전통지",
+        "④ 의견제출 (선택)",
+        "⑤-1 시정명령-1차",
+        "⑤-2 시정명령-2차(촉구)",
+
+        "⑥ 이행강제금 부과예고",
+        "⑦ 이행강제금 부과·징수",
     ]
 
     for step in steps:
-
         st.success(step)
 
+        if step == "① 위반행위 적발":
+            st.warning(
+                "※ 위반행위 적발 시 고발 검토\n\n"
+                "• 개발제한구역의 과도한 훼손\n"
+                "• 중대한 위법행위\n"
+                "• 상습적·고의적인 위반행위\n"
+                "→ 해당하는 경우 시정명령 절차와 별도로 즉시 고발 여부 검토"
+            )
 
+        if step == "⑥ 이행강제금 부과예고":
+            st.markdown("　↳ **필요 시 불법행위 고발 검토 및 고발**")
 # --------------------------------------------------
 # 이행강제금 계산
 # --------------------------------------------------
@@ -3589,6 +3880,52 @@ elif menu == "🧮 이행강제금 계산":
         '<div class="main-title">🧮 이행강제금 계산</div>',
         unsafe_allow_html=True,
     )
+    violation_category = st.selectbox(
+        "① 위반 구분 선택",
+        [
+            "허가사항 위반",
+            "신고사항 위반",
+        ],
+        key="enforcement_violation_category",
+    )
+    
+    violation_type = st.selectbox(
+        "② 위반행위 유형 선택",
+        [
+            "건축물의 건축",
+            "건축물의 용도변경",
+            "공작물의 설치",
+            "토지의 형질변경",
+            "물건을 쌓아놓는 행위",
+            "죽목 벌채",
+        ],
+        key="enforcement_violation_type",
+    )
+
+    if violation_type in ["건축물의 건축", "건축물의 용도변경"]:
+        st.info(
+            "건축물의 건축·용도변경은 해당 연도의 지방세 시가표준액 조사·산정 기준에 따라 "
+            "시가표준액을 산정한 후 개발제한구역법 시행령 별표 5의 기준을 적용합니다."
+        )
+    else:
+        st.info(
+            "토지 관련 위반행위는 해당 토지의 개별공시지가를 기준으로 "
+            "개발제한구역법 시행령 별표 5의 기준을 적용합니다."
+        )
+
+    if violation_type in ["건축물의 건축", "건축물의 용도변경"]:
+        standard_value = st.number_input(
+            "③ 건물시가표준액(원/㎡)",
+            min_value=0.0,
+            step=1000.0,
+        )
+
+    else:
+        standard_value = st.number_input(
+            "③ 개별공시지가(원/㎡)",
+            min_value=0.0,
+            step=1000.0,
+        )
 
     col1, col2 = st.columns(2)
 
@@ -3600,20 +3937,68 @@ elif menu == "🧮 이행강제금 계산":
             step=1.0,
         )
 
-    with col2:
 
-        unit_price = st.number_input(
-            "적용 단가(원)",
+    if violation_category == "허가사항 위반":
+        rate_map = {
+            "건축물의 건축": 0.50,
+            "건축물의 용도변경": 0.30,
+            "공작물의 설치": 0.50,
+            "토지의 형질변경": 0.30,
+            "물건을 쌓아놓는 행위": 0.30,
+            "죽목 벌채": 0.30,
+        }
+    else:
+        rate_map = {
+            "건축물의 건축": 0.25,
+            "건축물의 용도변경": 0.15,
+            "공작물의 설치": 0.25,
+            "토지의 형질변경": 0.15,
+            "물건을 쌓아놓는 행위": 0.15,
+            "죽목 벌채": 0.15,
+        }
+
+    rate = rate_map[violation_type]
+
+    adjustment_type = st.selectbox(
+        "④ 가중·감경 선택",
+        [
+            "해당 없음",
+            "가중",
+            "감경",
+        ],
+        key="enforcement_adjustment_type",
+    )
+
+    if adjustment_type != "해당 없음":
+        adjustment_rate = st.number_input(
+            "가중·감경률(%)",
             min_value=0.0,
-            step=1000.0,
+            max_value=50.0,
+            step=1.0,
         )
+    else:
+        adjustment_rate = 0.0
 
     if st.button("계산하기"):
+        base_result = standard_value * area * rate
 
-        result = area * unit_price
+        if adjustment_type == "가중":
+            result = base_result * (1 + adjustment_rate / 100)
+        elif adjustment_type == "감경":
+            result = base_result * (1 - adjustment_rate / 100)
+        else:
+            result = base_result
+            
+        st.write(f"📌 별표 5 적용률: {rate * 100:.0f}%")
+        st.write(f"💰 기본 산정액: {base_result:,.0f}원")
+
+        if adjustment_type == "가중":
+            st.write(f"⬆️ 가중률: {adjustment_rate:.0f}%")
+        elif adjustment_type == "감경":
+            st.write(f"⬇️ 감경률: {adjustment_rate:.0f}%")
 
         st.success(
-            f"예상 이행강제금: {result:,.0f}원"
+            f"최종 예상 이행강제금: {result:,.0f}원"
         )
 
         st.caption(
